@@ -16,13 +16,13 @@ provider "google" {
   region      = "us-central1"
 }
 
-### Define the VPC network
+/Define the VPC network/
 resource "google_compute_network" "my_vpc_network" {
   name                    = "harshinivpc"
   auto_create_subnetworks = false
 }
 
-### Define the subnet within the VPC network
+/Define the subnet within the VPC network/
 resource "google_compute_subnetwork" "my_subnet" {
   name          = "har-subnet"
   ip_cidr_range  = "10.0.0.0/24"
@@ -30,7 +30,7 @@ resource "google_compute_subnetwork" "my_subnet" {
   region         = "us-central1"
 }
 
-### Optional: Define a firewall rule to allow traffic (e.g., allow all traffic from within the VPC)
+/Optional: Define a firewall rule to allow traffic (e.g., allow all traffic from within the VPC)/
 resource "google_compute_firewall" "allow_all" {
   name    = "allow-all"
   network = google_compute_network.my_vpc_network.id
