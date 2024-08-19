@@ -11,6 +11,7 @@ VPC Peering enables you to connect two VPC networks so that resources in one net
 # TERRAFORM CODE FOR VNET AND SUBNET CREATION :
 
 provider "google" {
+
   credentials = file("C:/Users/vharshini/OneDrive - Sopra Steria/GCP LANDING ZONE/creds.json")
   
   project     = "harshini-poc"
