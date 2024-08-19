@@ -57,3 +57,17 @@ resource "google_compute_firewall" "allow_all" {
   source_ranges = ["10.0.0.0/24"]
 }
 
+
+
+# Terraform Configuration for VPC Network Peering
+
+## Provider Configuration
+
+The following Terraform code configures the Google Cloud provider:
+
+```hcl
+provider "google" {
+  credentials = file("C:/Users/vharshini/OneDrive - Sopra Steria/GCP LANDING ZONE/creds.json")
+  project     = "harshini-poc"
+  region      = "us-central1"  # Replace with your desired region
+}
